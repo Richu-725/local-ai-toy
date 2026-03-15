@@ -1,0 +1,135 @@
+:root {
+  --bg: #f7f2ea;
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --accent: #0a7a6f;
+  --card: #ffffff;
+  --border: #e3d9cb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 10%, #f9e6d8, transparent 45%),
+    radial-gradient(circle at 90% 20%, #e6f2ee, transparent 40%),
+    var(--bg);
+}
+
+.page {
+  max-width: 860px;
+  margin: 48px auto;
+  padding: 0 20px 40px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  letter-spacing: -0.5px;
+  margin: 12px 0 8px;
+}
+
+.hero p {
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff6ec;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.card {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(26, 26, 26, 0.06);
+}
+
+.card.small {
+  padding: 16px 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+  resize: vertical;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.result {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #f4f9f7;
+  border: 1px dashed #b9d8d2;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chip {
+  background: #f2efe9;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}

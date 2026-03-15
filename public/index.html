@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local AI Toy</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="badge">Offline AI</div>
+        <h1>Naive Bayes Classifier</h1>
+        <p>
+          A tiny spam vs ham classifier that runs entirely on your machine.
+          No API key, no network calls.
+        </p>
+      </header>
+
+      <section class="card">
+        <label for="text" class="label">Try a sentence</label>
+        <textarea id="text" rows="4" placeholder="Type something like: free money now"></textarea>
+        <div class="row">
+          <button id="btn" type="button">Classify</button>
+          <span id="status" class="status"></span>
+        </div>
+        <div id="result" class="result" aria-live="polite"></div>
+      </section>
+
+      <section class="card small">
+        <h2>Example inputs</h2>
+        <div class="chips">
+          <button class="chip">free prize money now</button>
+          <button class="chip">can we move the meeting to monday</button>
+          <button class="chip">urgent: verify your account</button>
+          <button class="chip">here is the agenda for tomorrow</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

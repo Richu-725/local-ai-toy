@@ -24,3 +24,13 @@ Example output:
 
 Naive Bayes is a classic probabilistic machine learning model.
 Here we implement training and inference from scratch without any libraries.
+
+## Web UI
+
+Start the server:
+
+```bash
+node server.js
+```
+
+Then open http://localhost:3000 in your browser.
