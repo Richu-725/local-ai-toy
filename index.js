@@ -62,13 +62,26 @@ function classify(text) {
   return sSpam > sHam ? "spam" : "ham";
 }
 
-const samples = [
-  "free prize money now",
-  "can we move the meeting to monday",
-  "urgent: verify your account",
-  "here is the agenda for tomorrow",
-];
+const readline = await import("node:readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-for (const s of samples) {
-  console.log(`${JSON.stringify(s)} => ${classify(s)}`);
-}
+console.log("Offline Naive Bayes demo. Type a sentence to classify.");
+console.log("Type /exit to quit.");
+
+const ask = () => {
+  rl.question("> ", (line) => {
+    const text = line.trim();
+    if (!text) return ask();
+    if (text === "/exit") {
+      rl.close();
+      return;
+    }
+    console.log(`${JSON.stringify(text)} => ${classify(text)}`);
+    ask();
+  });
+};
+
+ask();
